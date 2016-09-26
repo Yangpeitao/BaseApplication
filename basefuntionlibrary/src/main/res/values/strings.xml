@@ -6,9 +6,10 @@
     <string name="base_function_check_ensure_pass">您两次输入的密码不一致！</string>
     <string name="base_function_check_verify_code">请输入合法的验证码</string>
 
-    <string name="base_function_et_input_phone">请输入手机号</string>
-    <string name="base_function_et_check_account">至少6位数字、字母组成</string>
-    <string name="base_function_et_check_pass">6~20位数字、字母组合</string>
+    <string name="base_function_et_hint_phone">请输入手机号</string>
+    <string name="base_function_et_hint_pass">请输入登录密码</string>
+    <string name="base_function_et_hint_verify">请输入验证码</string>
+    <string name="base_function_et_hint_set_pass">6~20位数字、字母组合</string>
 
 </resources>
 
