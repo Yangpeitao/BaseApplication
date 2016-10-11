@@ -11,7 +11,6 @@ import android.text.format.Time;
 public class TimeFormatUtil {
 
     private TimeFormatUtil() {
-
     }
 
     /**

@@ -17,7 +17,6 @@ public class PinYinUtil {
      * 防止实例化.
      */
     private PinYinUtil() {
-
     }
 
     /**

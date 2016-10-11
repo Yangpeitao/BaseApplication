@@ -26,6 +26,9 @@ public class BaseFunction {
      */
     private static long recordExitTime = 0;
 
+    public BaseFunction() {
+    }
+
     /**
      * 判断当前是否联网
      *
