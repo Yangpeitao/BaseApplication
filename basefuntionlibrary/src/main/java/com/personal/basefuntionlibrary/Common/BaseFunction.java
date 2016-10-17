@@ -7,10 +7,10 @@ import android.net.NetworkInfo;
 import android.widget.Toast;
 
 import com.personal.basefuntionlibrary.R;
-import com.personal.basefuntionlibrary.Util.PhoneUtil;
 
 /**
- * Created by ustc on 2016/8/3.
+ * 功能相关的基础操作
+ * Created by 杨培韬 on 2016/8/3.
  */
 public class BaseFunction {
     /**
@@ -39,13 +39,7 @@ public class BaseFunction {
         ConnectivityManager man = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = man.getActiveNetworkInfo();
-        boolean ret;
-        if (info != null && info.isAvailable()) {
-            ret = true;
-        } else {
-            ret = false;
-        }
-        return ret;
+        return (info != null) && (info.isAvailable());
     }
 
     public static boolean isGetOut(Context context) {

@@ -39,7 +39,7 @@ public class ViewFunction {
         }
     }
 
-    public static void creatDelImageViewClick(ImageView iv, final EditText et) {
+    public static void createDelImageViewClick(ImageView iv, final EditText et) {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +48,7 @@ public class ViewFunction {
         });
     }
 
-    public static void setImgaeViewByEditText(EditText et, ImageView iv) {
+    public static void setImageViewByEditText(EditText et, ImageView iv) {
         if (et.getText().toString().length() > 0) {
             iv.setVisibility(View.VISIBLE);
         } else {

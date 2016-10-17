@@ -104,7 +104,7 @@ public class BaseFileUtil {
     }
 
     /**
-     * 获取拥有写权限的文件.
+     * 获取拥有写权限的文件夹.
      *
      * @return 目录File对象.
      */

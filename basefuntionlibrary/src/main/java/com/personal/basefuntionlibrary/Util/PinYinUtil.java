@@ -13,9 +13,7 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
  * Created by 杨培韬 on 2015/12/15.
  */
 public class PinYinUtil {
-    /**
-     * 防止实例化.
-     */
+
     private PinYinUtil() {
     }
 
@@ -38,9 +36,8 @@ public class PinYinUtil {
         String output = "";
 
         try {
-            for (int i = 0; i < input.length; i++) {
-                String[] temp = PinyinHelper.toHanyuPinyinStringArray(
-                        input[i], format);
+            for (char c : input) {
+                String[] temp = PinyinHelper.toHanyuPinyinStringArray(c, format);
                 // 取拼音的全部内容
                 output += temp[0];
             }

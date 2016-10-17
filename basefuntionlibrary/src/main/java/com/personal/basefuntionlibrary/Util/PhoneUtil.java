@@ -9,8 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
- * Created by ustc on 2016/8/4.
+ * 手机号格式的判断类
+ * Created by 杨培韬 on 2016/8/4.
  */
 public class PhoneUtil {
 
@@ -53,7 +53,7 @@ public class PhoneUtil {
         } else if (phone.startsWith("12520")) {
             phone = phone.substring("12520".length());
         }
-        // add by weiyao 去除空白字符或'-'，有的通讯录获取的号码之间有space 或'-';
+        //去除空白字符或'-'，有的通讯录获取的号码之间有space 或'-';
         phone = phone.replaceAll("[\\s-]", "");
         return phone;
     }

@@ -13,17 +13,17 @@ public class DialogUtil extends Dialog {
 
     public DialogUtil(final Context context, final View view) {
         super(context);
-        creatUserDialog(view, false);
+        createUserDialog(view, false);
     }
 
     public DialogUtil(final Context context, final View view, final boolean isCancelable) {
         super(context);
-        creatUserDialog(view, isCancelable);
+        createUserDialog(view, isCancelable);
 
 
     }
 
-    private void creatUserDialog(View view, boolean isProgress) {
+    private void createUserDialog(View view, boolean isProgress) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(view);
         getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
