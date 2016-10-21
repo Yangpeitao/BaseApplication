@@ -78,22 +78,21 @@ public class ViewFunction {
         boolean ret = false;
         if (pass.length() >= MIN_PASS_LENGTH &&
                 pass.length() <= MAX_PASS_LENGTH) {
+
             boolean haveNum = false;
-            for (int i = pass.length(); --i >= 0; ) {
-                char c = pass.charAt(i);
+            boolean haveAlp = false;
+            boolean haveOther = false;
+
+            for (char c : pass.toCharArray()) {
                 if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
-                    ret = true;
-                    break;
-                }
-            }
-            for (int i = pass.length(); --i >= 0; ) {
-                char c = pass.charAt(i);
-                if (((c >= '0' && c <= '9'))) {
+                    haveAlp = true;
+                } else if (((c >= '0' && c <= '9'))) {
                     haveNum = true;
-                    break;
+                } else {
+                    haveOther = true;
                 }
             }
-            ret = ret && haveNum;
+            ret = haveAlp && haveNum && (!haveOther);
         }
         if (!ret) {
             Toast.makeText(context, R.string.base_function_check_pass, Toast.LENGTH_SHORT).show();
