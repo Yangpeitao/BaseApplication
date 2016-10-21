@@ -13,7 +13,7 @@ public class DialogUtil extends Dialog {
 
     public DialogUtil(final Context context, final View view) {
         super(context);
-        createUserDialog(view, false);
+        createUserDialog(view, true);
     }
 
     public DialogUtil(final Context context, final View view, final boolean isCancelable) {
@@ -23,18 +23,13 @@ public class DialogUtil extends Dialog {
 
     }
 
-    private void createUserDialog(View view, boolean isProgress) {
+    private void createUserDialog(View view, boolean isCancelable) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(view);
         getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
 
-        if (isProgress) {
-            setCancelable(true);
-            setCanceledOnTouchOutside(true);
-        } else {
-            setCancelable(false);
-            setCanceledOnTouchOutside(false);
-        }
+        setCancelable(isCancelable);
+        setCanceledOnTouchOutside(isCancelable);
     }
 
 }
