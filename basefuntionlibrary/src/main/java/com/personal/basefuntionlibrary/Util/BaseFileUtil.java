@@ -12,7 +12,7 @@ import java.io.File;
 
 public class BaseFileUtil {
 
-    public BaseFileUtil() {
+    private BaseFileUtil() {
     }
 
     /**

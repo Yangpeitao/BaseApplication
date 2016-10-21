@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  */
 public class PhoneUtil {
 
-    public PhoneUtil() {
+    private PhoneUtil() {
     }
 
     public static boolean isPhoneNumber(final String formatPhone) {

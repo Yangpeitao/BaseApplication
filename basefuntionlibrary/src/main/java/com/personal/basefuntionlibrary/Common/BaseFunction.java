@@ -26,7 +26,7 @@ public class BaseFunction {
      */
     private static long recordExitTime = 0;
 
-    public BaseFunction() {
+    private BaseFunction() {
     }
 
     /**

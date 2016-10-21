@@ -28,7 +28,7 @@ public class ViewFunction {
      */
     private static final int VERIFY_CODE_LENGTH = 6;
 
-    public ViewFunction() {
+    private ViewFunction() {
     }
 
     public static void setBinaryIcon(ImageView iv, boolean ret, int resIdOn, int resIdOff) {
