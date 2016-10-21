@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="WORD_TITLE">20sp</dimen>
+    <dimen name="WORD_BUTTON">18sp</dimen>
+    <dimen name="WORD_LEVEL_1">16sp</dimen>
+    <dimen name="WORD_LEVEL_2">14sp</dimen>
+    <dimen name="WORD_LEVEL_3">12sp</dimen>
+    <dimen name="WORD_LEVEL_4">10sp</dimen>
+
+    <dimen name="SIZE_LINE">1dp</dimen>
+
+    <dimen name="SIZE_DIALOG">256dp</dimen>
+    <dimen name="SIZE_WIDGET">48dp</dimen>
+    <dimen name="SIZE_WIDGET_LARGE">56dp</dimen>
+    <dimen name="SIZE_WIDGET_SMALL">32dp</dimen>
+
+    <dimen name="SIZE_TITLE">48dp</dimen>
+    <dimen name="SIZE_ITEM">64dp</dimen>
+    <dimen name="SIZE_BOTTOM">56dp</dimen>
+
+    <dimen name="SIZE_INTERVAL">16dp</dimen>
+    <dimen name="SIZE_INTERVAL_MORE">12dp</dimen>
+    <dimen name="SIZE_INTERVAL_HALF">8dp</dimen>
+    <dimen name="SIZE_INTERVAL_QUARTER">4dp</dimen>
+
+</resources>

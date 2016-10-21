@@ -1,0 +1,29 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+
+    <dimen name="WORD_TITLE">80sp</dimen>
+    <dimen name="WORD_BUTTON">72sp</dimen>
+    <dimen name="WORD_LEVEL_1">64sp</dimen>
+    <dimen name="WORD_LEVEL_2">56sp</dimen>
+    <dimen name="WORD_LEVEL_3">48sp</dimen>
+    <dimen name="WORD_LEVEL_4">40sp</dimen>
+
+    <dimen name="SIZE_LINE">4dp</dimen>
+
+    <dimen name="SIZE_DIALOG">1024dp</dimen>
+    <dimen name="SIZE_WIDGET">192dp</dimen>
+    <dimen name="SIZE_WIDGET_LARGE">224dp</dimen>
+    <dimen name="SIZE_WIDGET_SMALL">128dp</dimen>
+
+    <dimen name="SIZE_TITLE">192dp</dimen>
+    <dimen name="SIZE_ITEM">256dp</dimen>
+    <dimen name="SIZE_BOTTOM">224dp</dimen>
+
+    <dimen name="SIZE_INTERVAL">64dp</dimen>
+    <dimen name="SIZE_INTERVAL_MORE">48dp</dimen>
+    <dimen name="SIZE_INTERVAL_HALF">32dp</dimen>
+    <dimen name="SIZE_INTERVAL_QUARTER">16dp</dimen>
+
+</resources>
