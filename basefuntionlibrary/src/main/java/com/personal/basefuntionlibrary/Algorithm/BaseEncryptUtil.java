@@ -81,28 +81,4 @@ public class BaseEncryptUtil {
         return matcher.matches();
     }
 
-    private static class CodeUtil {
-
-        private static String encode(final byte[] input) {
-
-            return Base64TransUtil.encode(input);
-        }
-
-        private static byte[] decode(final String input) {
-
-            return Base64TransUtil.decode(input);
-        }
-    }
-
-    private static class Base64TransUtil {
-
-        private static String encode(final byte[] input) {
-            return Base64.encodeToString(input, Base64.NO_WRAP);
-        }
-
-        private static byte[] decode(final String inputString) {
-            return Base64.decode(inputString, Base64.NO_WRAP);
-        }
-
-    }
 }
