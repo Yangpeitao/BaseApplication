@@ -53,11 +53,12 @@ public class BaseFunction {
         }
     }
 
-    public static void getHome(Context context) {
+    public static boolean getHome(Context context) {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         context.startActivity(intent);
+        return true;
     }
 
 }

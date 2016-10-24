@@ -22,8 +22,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.net.ssl.HttpsURLConnection;
-
 /**
  * 与服务器交互的基础类
  * Created by 杨培韬 on 2016/10/21.
@@ -41,14 +39,15 @@ public class BaseWebClient {
             headers.set("Connection", "Close");
             headers.setContentType(MediaType.APPLICATION_JSON);
 
-            String str = request.toString();
-
-            byte[] requestByte = str.getBytes();
-            try {
-                str = new String(requestByte, org.apache.http.protocol.HTTP.ISO_8859_1);
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
+            String str = formatString(request.toString());
+//            String str = request.toString();
+//
+//            byte[] requestByte = str.getBytes();
+//            try {
+//                str = new String(requestByte, org.apache.http.protocol.HTTP.ISO_8859_1);
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            }
             HttpEntity<String> entity = new HttpEntity<>(str, headers);
 //            HttpEntity<String> entity = new HttpEntity<>(request.toString(), headers);
             RestTemplate restTemplate = new RestTemplate();
@@ -88,6 +87,16 @@ public class BaseWebClient {
         }
 
         return response;
+    }
+
+    public static String formatString(String str) {
+        try {
+            byte[] requestByte = str.getBytes();
+            return new String(requestByte, org.apache.http.protocol.HTTP.ISO_8859_1);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return str;
+        }
     }
 
 }
