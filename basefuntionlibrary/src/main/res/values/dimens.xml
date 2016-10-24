@@ -10,7 +10,6 @@
 
     <dimen name="SIZE_LINE">1dp</dimen>
 
-    <dimen name="SIZE_DIALOG">256dp</dimen>
     <dimen name="SIZE_WIDGET">48dp</dimen>
     <dimen name="SIZE_WIDGET_LARGE">56dp</dimen>
     <dimen name="SIZE_WIDGET_SMALL">32dp</dimen>

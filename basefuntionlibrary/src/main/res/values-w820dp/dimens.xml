@@ -12,7 +12,6 @@
 
     <dimen name="SIZE_LINE">4dp</dimen>
 
-    <dimen name="SIZE_DIALOG">1024dp</dimen>
     <dimen name="SIZE_WIDGET">192dp</dimen>
     <dimen name="SIZE_WIDGET_LARGE">224dp</dimen>
     <dimen name="SIZE_WIDGET_SMALL">128dp</dimen>
