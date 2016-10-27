@@ -61,5 +61,28 @@ public class BaseFunction {
         return true;
     }
 
+    /**
+     * 判断字符串是否仅为数字与字母组合
+     *
+     * @param str 待测字符串
+     * @return true:仅为数字、字母组合
+     */
+    public static boolean isAlphabetAndNumber(String str) {
+        boolean haveNum = false;
+        boolean haveAlp = false;
+        boolean haveOther = false;
+
+        for (char c : str.toCharArray()) {
+            if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
+                haveAlp = true;
+            } else if (((c >= '0' && c <= '9'))) {
+                haveNum = true;
+            } else {
+                haveOther = true;
+            }
+        }
+        return haveAlp && haveNum && (!haveOther);
+    }
+
 }
 

@@ -78,21 +78,7 @@ public class ViewFunction {
         boolean ret = false;
         if (pass.length() >= MIN_PASS_LENGTH &&
                 pass.length() <= MAX_PASS_LENGTH) {
-
-            boolean haveNum = false;
-            boolean haveAlp = false;
-            boolean haveOther = false;
-
-            for (char c : pass.toCharArray()) {
-                if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
-                    haveAlp = true;
-                } else if (((c >= '0' && c <= '9'))) {
-                    haveNum = true;
-                } else {
-                    haveOther = true;
-                }
-            }
-            ret = haveAlp && haveNum && (!haveOther);
+            ret = BaseFunction.isAlphabetAndNumber(pass);
         }
         if (!ret) {
             Toast.makeText(context, R.string.base_function_check_pass, Toast.LENGTH_SHORT).show();
@@ -108,5 +94,7 @@ public class ViewFunction {
             return true;
         }
     }
+
+
 
 }
