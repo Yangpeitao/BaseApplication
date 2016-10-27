@@ -10,12 +10,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.FormHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.xml.SourceHttpMessageConverter;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.UnsupportedEncodingException;
@@ -28,6 +30,10 @@ import java.util.List;
  */
 
 public class BaseWebClient {
+    /**
+     * 设置网络连接最大时间不超过5s
+     */
+    private static final int TIME_WEB_LINK = 5 * 1000;
 
     private BaseWebClient() {
     }
@@ -39,23 +45,19 @@ public class BaseWebClient {
             headers.set("Connection", "Close");
             headers.setContentType(MediaType.APPLICATION_JSON);
 
+            SimpleClientHttpRequestFactory clientHttpRequestFactory = new SimpleClientHttpRequestFactory();
+            clientHttpRequestFactory.setConnectTimeout(TIME_WEB_LINK);
+
             String str = formatString(request.toString());
-//            String str = request.toString();
-//
-//            byte[] requestByte = str.getBytes();
-//            try {
-//                str = new String(requestByte, org.apache.http.protocol.HTTP.ISO_8859_1);
-//            } catch (UnsupportedEncodingException e) {
-//                e.printStackTrace();
-//            }
             HttpEntity<String> entity = new HttpEntity<>(str, headers);
-//            HttpEntity<String> entity = new HttpEntity<>(request.toString(), headers);
+
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+            restTemplate.setRequestFactory(clientHttpRequestFactory);
 
             try {
                 response = restTemplate.exchange(url + methodName, method, entity, String.class);
-            } catch (HttpClientErrorException e) {
+            } catch (RestClientException e) {
                 e.printStackTrace();
             }
         }
