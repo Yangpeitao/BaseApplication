@@ -14,10 +14,6 @@ import com.personal.basefuntionlibrary.R;
  */
 public class BaseFunction {
     /**
-     * 手机号长度
-     */
-    public static final int PHONE_LENGTH = 11;
-    /**
      * 按返回键退出的最大间隔时间
      */
     private static final long TIME_EXIT = 3 * 1000;

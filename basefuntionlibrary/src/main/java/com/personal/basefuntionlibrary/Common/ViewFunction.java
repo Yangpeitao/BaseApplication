@@ -9,24 +9,12 @@ import android.widget.Toast;
 import com.personal.basefuntionlibrary.R;
 import com.personal.basefuntionlibrary.Util.PhoneUtil;
 
+
 /**
  * 与界面操作相关的基础操作
  * Created by 杨培韬 on 2016/9/26.
  */
 public class ViewFunction {
-
-    /**
-     * 登录密码的最小长度
-     */
-    private static final int MIN_PASS_LENGTH = 6;
-    /**
-     * 登录密码的最大长度
-     */
-    private static final int MAX_PASS_LENGTH = 20;
-    /**
-     * 验证码长度
-     */
-    private static final int VERIFY_CODE_LENGTH = 6;
 
     private ViewFunction() {
     }
@@ -57,7 +45,7 @@ public class ViewFunction {
     }
 
     public static boolean checkVerify(Context context, String verify) {
-        if (verify.length() != VERIFY_CODE_LENGTH) {
+        if (verify.length() != BaseConstant.VERIFY_CODE_LENGTH) {
             Toast.makeText(context, R.string.base_function_check_verify_code, Toast.LENGTH_SHORT).show();
             return false;
         } else {
@@ -76,8 +64,8 @@ public class ViewFunction {
 
     public static boolean checkPass(Context context, String pass) {
         boolean ret = false;
-        if (pass.length() >= MIN_PASS_LENGTH &&
-                pass.length() <= MAX_PASS_LENGTH) {
+        if (pass.length() >= BaseConstant.MIN_PASS_LENGTH &&
+                pass.length() <= BaseConstant.MAX_PASS_LENGTH) {
             ret = BaseFunction.isAlphabetAndNumber(pass);
         }
         if (!ret) {
@@ -94,7 +82,6 @@ public class ViewFunction {
             return true;
         }
     }
-
 
 
 }

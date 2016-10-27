@@ -3,6 +3,7 @@ package com.personal.basefuntionlibrary.Util;
 import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
 
+import com.personal.basefuntionlibrary.Common.BaseConstant;
 import com.personal.basefuntionlibrary.Common.BaseFunction;
 
 import java.util.regex.Matcher;
@@ -21,8 +22,8 @@ public class PhoneUtil {
         if (TextUtils.isEmpty(formatPhone)) {
             return false;
         }
-        if (formatPhone.length() == BaseFunction.PHONE_LENGTH) {
-            for (int i = 0; i < BaseFunction.PHONE_LENGTH; i++) {
+        if (formatPhone.length() == BaseConstant.PHONE_LENGTH) {
+            for (int i = 0; i < BaseConstant.PHONE_LENGTH; i++) {
                 if (!PhoneNumberUtils.isISODigit(formatPhone.charAt(i))) {
                     return false;
                 }
