@@ -91,7 +91,7 @@ public class BaseWebClient {
         return response;
     }
 
-    public static String formatString(String str) {
+    private static String formatString(String str) {
         try {
             byte[] requestByte = str.getBytes();
             return new String(requestByte, org.apache.http.protocol.HTTP.ISO_8859_1);
