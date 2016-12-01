@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/activity_main2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hddata.baseapplication.MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/p0102_vp_start"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:id="@+id/activity_fragment">
 
-    <LinearLayout
-        android:id="@+id/p0102_ly_sign"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/SIZE_INTERVAL"
-        android:layout_marginTop="@dimen/SIZE_INTERVAL_HALF"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-    </LinearLayout>
+    </FrameLayout>
 </RelativeLayout>
