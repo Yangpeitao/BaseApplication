@@ -23,7 +23,7 @@ public class PinYinUtil {
      * @param inputString 汉字输入
      * @return 转换完成的拼音 输入为null 或"" 时 返回""
      */
-    public static String getPingYin(final String inputString) {
+    public static String getPingYin( String inputString) {
         if (TextUtils.isEmpty(inputString)) {
             return "";
         }
@@ -32,19 +32,21 @@ public class PinYinUtil {
         format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
         format.setVCharType(HanyuPinyinVCharType.WITH_V);
         // 把字符串转化成字符数组
+        inputString=inputString.replace(" ","");
         char[] input = inputString.trim().toCharArray();
         String output = "";
 
-        try {
-            for (char c : input) {
+        for (char c : input) {
+            try {
                 String[] temp = PinyinHelper.toHanyuPinyinStringArray(c, format);
                 // 取拼音的全部内容
                 output += temp[0];
+            } catch (Exception e) {
+                e.printStackTrace();
+                output += c;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return inputString.toLowerCase();
         }
+        output = output.toLowerCase();
         return output;
     }
 }
